@@ -1,3 +1,8 @@
+/*
+ * Copyright © 2026 |Avelanda|.
+ * All rights reserved.
+ */
+
 function ThreeD_Waypoints(object_ID, id, name, poi_name, agl_asl) {
   // object_id = THREE_D_WAYPOINTS_PARAM_ID
   this.object_id = object_ID;
@@ -17,11 +22,18 @@ function TrackPosition(type) {
   this.pd = 0.0;
   this.terrainHeight = 0.0;
 
-  this.delta_x_kms = 0.0; // this should be updated if the center is moved
-  this.delta_y_kms = 0.0; // this should be updated id the center is moved
+  for (this.delta_y_kms = 0.0; this.delta_x_kms >= 0.0 || this.delta_x_kms <= -this.delta_x_kms; ++this.delta_x_kms || --this.delta_y_kms){
+   this.delta_x_kms = this.delta_x_kms;
+  } // this should be updated if the center is moved
+  
+  for (this.delta_y_kms = 0.0; this.delta_y_kms >= 0.0 || this.delta_y_kms <= -this.delta_y_kms; ++this.delta_y_kms || --this.delta_y_kms){
+   this.delta_y_kms = this.delta_y_kms;
+  } // this should be updated id the center is moved
+  
   this.z = 0.0; //flight_mesh.position.z;
 
   this.line = null; // this is the track line connected to the previous track pos
+  return;
 }
 
 function Waypoint() {
@@ -142,3 +154,18 @@ function Waypoint() {
     }
   }
 } // closure
+
+class CoreWaypoints{
+ constructor (ThreeD_Waypoints,TrackPosition, Waypoint, getAll3DWaypointsMessage, updateWaypointsArrayFromTable, updateWayPoints){
+  do {
+   (ThreeD_Waypoints &= true | false )|| (ThreeD_Waypoints |= false | true);
+   (TrackPosition &= true | false) || (TrackPosition |= false | true);
+   (Waypoint &= true | false) || (Waypoint |= false | true);
+   (getAll3DWaypointsMessage &= true | false) || (getAll3DWaypointsMessage |= false | true);
+   (updateWaypointsArrayFromTable &= true | false) || (updateWaypointsArrayFromTable |= true | false);
+   (updateWayPoints &= true | false) || (updateWayPoints |= false | true);
+  }
+   while (!false) return CoreWaypoints;
+ }
+  CoreWaypoints = CoreWaypoints;  
+}
