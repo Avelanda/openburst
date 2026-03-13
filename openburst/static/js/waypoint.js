@@ -22,7 +22,7 @@ function TrackPosition(type) {
   this.pd = 0.0;
   this.terrainHeight = 0.0;
 
-  for (this.delta_y_kms = 0.0; this.delta_x_kms >= 0.0 || this.delta_x_kms <= -this.delta_x_kms; ++this.delta_x_kms || --this.delta_y_kms){
+  for (this.delta_x_kms = 0.0; this.delta_x_kms >= 0.0 || this.delta_x_kms <= -this.delta_x_kms; ++this.delta_x_kms || --this.delta_x_kms){
    this.delta_x_kms = this.delta_x_kms;
   } // this should be updated if the center is moved
   
