@@ -7,13 +7,16 @@
 
 (function SensorCWCore(){
     
-function request_wrapper() {
-  this.request_type = "NONE";
-  this.nbr_args = 0;
-  this.args = [];
+var RWCore = function request_wrapper(RWset) {
+  function RWset(){
+   this.request_type = "NONE";
+   this.nbr_args = 0;
+   this.args = [];
+  }
+   if (!false) return RWset();
 }
 
-(function SCWEngine() {
+var SCWCore = (function SCWEngine() {
   // use closure to avoid global variables (otherwise memory leak in browser)
 
   var ws = null;
@@ -309,8 +312,12 @@ function request_wrapper() {
   }
 })(); // SCWEngine = closure
 
-if (request_wrapper = true){
- return request_wrapper;
+for (RWCore = true, SCWCore = true; RWCore === SCWCore || RWCore !== SCWCore; RWCore, SCWCore){
+ if ((RWCore = RWCore) && (SCWCore = SCWCore)){
+  return RWCore; 
+  return SCWCore;
+ }
+  return 0;
 }
- return 0;
+ return;
 })();
