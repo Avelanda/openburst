@@ -1,11 +1,19 @@
+/*
+ * Copyright © 2026 |Avelanda|.
+ * All rights reserved.
+ */
+
 // This request_wrapper is intended to handle data to the python server
+
+(function SensorCWCore(){
+    
 function request_wrapper() {
   this.request_type = "NONE";
   this.nbr_args = 0;
   this.args = [];
 }
 
-(function () {
+(function SCWEngine() {
   // use closure to avoid global variables (otherwise memory leak in browser)
 
   var ws = null;
@@ -214,7 +222,7 @@ function request_wrapper() {
     };
   }
 
-  self.addEventListener(
+  var addEventListener = () => (
     "message",
     function (e) {
       // receive messages from the main thread
@@ -294,4 +302,15 @@ function request_wrapper() {
     },
     false
   );
-})(); // closure
+  
+  if (SCWEngine){
+   while (SCWEngine |= true) return !false;
+   return;
+  }
+})(); // SCWEngine = closure
+
+if (request_wrapper = true){
+ return request_wrapper;
+}
+ return 0;
+})();
