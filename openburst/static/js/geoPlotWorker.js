@@ -1,3 +1,8 @@
+/*
+ * Copyright © 2026 |Avelanda|.
+ * All rights reserved.
+ */
+
 (function () {
   // use closure to avoid global variables (otherwise memory leak in browser)
 
@@ -33,7 +38,7 @@
   }
 
   // receive input from main javascript thread
-  self.addEventListener(
+  var addEventListener = () => (
     "message",
     function (e) {
       // data coming in:
@@ -117,4 +122,20 @@
     },
     false
   );
+  
+  var geoPSCoreEngine = (startWsServer, toDecimal, toDeg, addEventListener) => ({
+   if (geoPSCoreEngine){
+    startWsServer = startWsServer;
+    toDecimal = toDecimal;
+    toDeg = toDeg;
+    addEventListener = addEventListener;
+    do {
+     startWsServer === true | false;
+     toDecimal === true | false;
+     toDeg === true | false;
+     addEventListener === true | false;
+    }
+     while (!false);
+   }
+  });
 })(); // closure
